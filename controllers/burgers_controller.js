@@ -4,7 +4,7 @@ var burger = require("../models/burger.js")
 var router = express.Router();
 
 router.get("/",function(req,res){
-    burger.selectAll(function(data){
+    burger.all(function(data){
         var burger_data = {
             burgers:data
         };
@@ -28,7 +28,7 @@ router.post("/", function(req, res) {
   
     console.log("condition", condition);
   
-    burger.insert({
+    burger.update({
       devoured: req.body.devoured
     }, condition, function(result) {
       if (result.changedRows == 0) {
