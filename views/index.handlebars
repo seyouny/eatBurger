@@ -8,12 +8,14 @@ this file. --}}
     <h2>Burgers that have not been eaten</h2>
 
     <ul>
-      {{!-- burger_data is an array of objects that is being
+      {{!-- data is an array of objects that is being
   iterated by #each and #if devoured is equal to true
   it will send information to the partials handlebar at burgers/burger_eaten
   and set devoured = true, which may change the information on the button.--}}
+
+  {{!-- I logged the data from burgers_controll.js a --}}
       {{#each data}}
-        <li>"helo?"</li>
+        <li>"hello?"</li>
         <li>{{data.burger_name}}</li>
       {{#unless devoured}}
 
