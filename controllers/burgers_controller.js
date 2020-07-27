@@ -8,8 +8,8 @@ router.get("/",function(req,res){
         var burger_data = {
             burgers:data
         };
-        console.log(data)
-        res.render("index",burger_data)
+        console.log("hello",data, "hell")
+        res.render("index",data)
     })
 })
 router.post("/", function(req, res) {
