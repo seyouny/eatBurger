@@ -6,10 +6,10 @@ var router = express.Router();
 router.get("/",function(req,res){
     burger.all(function(data){
         var burger_data = {
-            burgers:data
+            burger:data
         };
-        console.log(data)
-        res.render("index",data)
+        console.log(burger_data)
+        res.render("index",burger_data)
     })
 })
 router.post("/api/burgers", function(req, res) {
